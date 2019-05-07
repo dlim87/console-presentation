@@ -1,15 +1,13 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "console-presentation",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "Logging off: moving beyond console.log(), a presentation",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run clean & cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "clean": "rimraf dist",
-    "deploy": "npm run build && surge -p .",
-    "export": "spectacle-renderer --delay 3000",
+    "start": "webpack-dev-server",
     "lint": "eslint --ext .js,.jsx .",
-    "start": "cross-env NODE_ENV=development node server.js"
+    "build": "webpack",
+    "deploy": "node ./src/deploy_gh_pages.js"
   },
   "author": "Formidable Labs <hello@formidable.com> (https://formidable.com)",
   "license": "MIT",
@@ -67,5 +65,6 @@
     "webpack-dev-middleware": "^3.4.0",
     "webpack-dev-server": "^3.1.9",
     "webpack-hot-middleware": "^2.24.2"
-  }
+  },
+  "homepage": "https://dlim87.github.io/console-presentation/"
 }

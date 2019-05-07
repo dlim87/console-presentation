@@ -18,7 +18,9 @@ import {
   Code,
   CodePane,
   Appear,
-  Notes
+  Notes,
+  Link,
+  Image
 } from 'spectacle';
 
 // Import theme
@@ -31,6 +33,12 @@ import Table from '../assets/table';
 import Count from '../assets/count';
 import Assert from '../assets/assert';
 import Styling from '../assets/styling';
+import preloader from 'spectacle/lib/utils/preloader';
+
+const images = {
+  QR: require('../assets/qr.png')
+};
+preloader(images);
 
 // Require CSS
 require('normalize.css');
@@ -63,14 +71,9 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="secondary">
            Using the other Console Comands
           </Heading>
-          <Layout>
-            <Fill>
-              <Heading size = {4} textColor="tertiary">View on GITHUB HERE</Heading>
-            </Fill>
-            <Fill>
-              <Heading textColor="tertiary" size = {6}>Daniel Lim</Heading>
-            </Fill>
-          </Layout>
+          <Heading textColor="tertiary" size = {4}>
+            <Link href="https://www.linkedin.com/in/daniel-p-lim/">Daniel Lim</Link>
+          </Heading>
         </Slide>
 
         <Slide transition={['fade']} goTo={2} id="info">
@@ -183,6 +186,8 @@ export default class Presentation extends React.Component {
           <Heading size= {6} textColor="secondary">
             Questions?
           </Heading>
+          <Link>https://github.com/dlim87/console-presentation</Link>
+          <Image src={images.QR.replace('/','')} margin="0px auto 40px"/>
         </Slide>
       </Deck>
     );
