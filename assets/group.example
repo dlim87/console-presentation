@@ -1,0 +1,11 @@
+    console.group("first level");
+    console.log("level 1.a");
+    console.group();
+    console.groupCollapsed("collapsed group");
+    console.log("level 3a");
+    console.log("level 3b");
+    console.groupEnd();
+    console.log("level 2");
+    console.groupEnd();
+    console.log("level 1b");
+    console.groupEnd();
