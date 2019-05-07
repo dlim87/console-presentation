@@ -1,17 +1,14 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-trailing-spaces */
 // Import React
 import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
-  Image,
   List,
   ListItem,
-  Notes,
-  Quote,
   Slide,
   Text,
   GoToAction,
@@ -21,7 +18,7 @@ import {
   Code,
   CodePane,
   Appear,
-  italic
+  Notes
 } from 'spectacle';
 
 // Import theme
@@ -33,6 +30,7 @@ import Group from '../assets/group';
 import Table from '../assets/table';
 import Count from '../assets/count';
 import Assert from '../assets/assert';
+import Styling from '../assets/styling';
 
 // Require CSS
 require('normalize.css');
@@ -98,7 +96,7 @@ export default class Presentation extends React.Component {
           <Text><Code>console.clear()</Code> clears the console</Text>
           <Clear />
         </Slide>
-        
+         
         <Slide transition={['fade']} goTo={5} id="group">
           <Heading>Group</Heading>
           <List>
@@ -168,12 +166,22 @@ export default class Presentation extends React.Component {
 
         <Slide goTo={11} id="Styling">
           <Heading>Styling</Heading>
-
+          <List>
+            <ListItem>You can add styling to a log using %c and a css command</ListItem>
+            <ListItem>Use another %c and an empty quotes to revert to default styling </ListItem>
+          </List>
+          <CodePane lang="jsx"
+            source= {require('raw-loader!../assets/styling.example')}
+            margin= "20px auto"
+            textSize={30}
+          />
+          <Styling />
+          <Notes>rainbow css borrowed from https://hackernoon.com/styling-logs-in-browser-console-2ec0807dc91a</Notes>
         </Slide>
 
-        <Slide goTo={'last'}>
+        <Slide goTo={12} id='ToC'>
           <Heading size= {6} textColor="secondary">
-            Another slide!
+            Questions?
           </Heading>
         </Slide>
       </Deck>
