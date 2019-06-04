@@ -5655,7 +5655,8 @@ marked@^0.3.12:
 marked@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.1.tgz#062f43b88b02ee80901e8e8d8e6a620ddb3aa752"
-
+marked@^0.6.1:
+  version "0.6.1"
 marksy@^6.0.2:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/marksy/-/marksy-6.1.0.tgz#36482148a1115cc78570855f7ebd744bb453d5cc"
